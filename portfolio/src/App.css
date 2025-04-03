@@ -1,0 +1,62 @@
+/* General Styles */
+body {
+    background-color: #ffffff;
+    color: #301934;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar Styles */
+.navbar {
+    background-color: #301934;
+    padding: 1rem;
+}
+
+.navbar-brand,
+.nav-link {
+    color: #ffffff;
+}
+
+.nav-link:hover {
+    color: #7d3cff;
+}
+
+/* Container Styles */
+.container {
+    padding: 2rem;
+}
+
+/* ListGroup Styles */
+.list-group-item {
+    border: 1px solid #301934;
+    color: #301934;
+}
+
+.list-group-item:hover {
+    background-color: #f3e8fc;
+}
+
+/* Alert Styles */
+.alert {
+    background-color: #f3e8fc;
+    border-left: 5px solid #301934;
+}
+
+/* Button Styles (Optional) */
+.btn-primary {
+    background-color: #301934;
+    border-color: #301934;
+}
+
+.btn-primary:hover {
+    background-color: #7d3cff;
+}
+
+
+footer {
+    background-color: #301934;
+    color: #ffffff;
+    text-align: center;
+    padding: 1rem;
+}
