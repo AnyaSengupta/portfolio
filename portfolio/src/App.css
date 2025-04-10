@@ -1,62 +1,86 @@
-/* General Styles */
+:root {
+    --color-navbar: #8FB290;
+    --color-bg: #f5f5eb;
+    --color-accent: #EADCF8;
+    --color-contrast: #5D3B66;
+    --color-text: #2D2D2D;
+
+    --font-heading: 'Austin Trial', serif;
+    --font-body: 'Inter', sans-serif;
+}
+
 body {
-    background-color: #ffffff;
-    color: #301934;
-    font-family: Arial, sans-serif;
+    font-family: var(--font-body);
+    background-color: var(--color-bg);
+    color: var(--color-text);
     margin: 0;
     padding: 0;
+    scroll-behavior: smooth;
 }
 
-/* Navbar Styles */
 .navbar {
-    background-color: #301934;
-    padding: 1rem;
+    background-color: var(--color-navbar) !important;
+    padding: 0.5rem 1rem;
 }
 
-.navbar-brand,
-.nav-link {
-    color: #ffffff;
+.navbar a,
+.navbar-brand {
+    color: white !important;
+    font-family: "Satoshi";
+    font-weight: bold;
 }
 
-.nav-link:hover {
-    color: #7d3cff;
+h1,
+h2,
+h3 {
+    color: var(--color-contrast);
+    font-family: var(--font-heading);
 }
 
-/* Container Styles */
-.container {
-    padding: 2rem;
+section {
+    padding: 80px 20px;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
 }
 
-/* ListGroup Styles */
-.list-group-item {
-    border: 1px solid #301934;
-    color: #301934;
+#home {
+    background-color: var(--color-bg);
 }
 
-.list-group-item:hover {
-    background-color: #f3e8fc;
+#about {
+    background-color: var(--color-accent);
 }
 
-/* Alert Styles */
-.alert {
-    background-color: #f3e8fc;
-    border-left: 5px solid #301934;
+#projects {
+    background-color: var(--color-bg);
 }
 
-/* Button Styles (Optional) */
-.btn-primary {
-    background-color: #301934;
-    border-color: #301934;
+button,
+.btn {
+    background-color: var(--color-contrast);
+    color: white;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-family: var(--font-body);
+    transition: background-color 0.3s ease;
+    border: none;
 }
 
-.btn-primary:hover {
-    background-color: #7d3cff;
+button:hover,
+.btn:hover {
+    background-color: var(--color-navbar);
 }
 
+.highlight {
+    color: var(--color-contrast);
+    font-weight: bold;
+}
 
-footer {
-    background-color: #301934;
-    color: #ffffff;
-    text-align: center;
-    padding: 1rem;
+#no-scroll {
+    overflow: hidden;
+}
+
+#scroll {
+    overflow: visible;
 }

@@ -1,60 +1,114 @@
-// import ListGroup from "./componets/ListGroup";
-// function App() {
-//   let items = ["New York", "London", "San Francisco", "Los Angeles"];
+// import "bootstrap/dist/css/bootstrap.min.css";
+// import React, { useState, useEffect } from "react";
+// import "./App.css";
+// import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+// import NavBar from "./components/NavBar";
+// import Home from "./components/Home";
+// import About from "./components/About";
+// // import Footer from "./components/Footer";
+// // import Contact from "./components/Contact/Contact";
 
-//   const handleSelectItem = (item: string) => {
-//     console.log(item);
-//   };
+// const App: React.FC = () => {
+//   const [load, upadateLoad] = useState(true);
+
+//   useEffect(() => {
+//     const timer = setTimeout(() => {
+//       upadateLoad(false);
+//     }, 1200);
+
+//     return () => clearTimeout(timer);
+//   }, []);
+
 //   return (
-//     <div>
-//       <ListGroup
-//         items={items}
-//         heading="Cities"
-//         onSelectItem={handleSelectItem}
-//       />
-//     </div>
+//     <Router>
+//       <div className="App" id={load ? "no-scroll" : "scroll"}>
+//         <NavBar />
+//         {/* <ScrollToTop /> */}
+//         <Routes>
+//           <Route path="/" element={<Home />} />
+//           {/* <Route path="/project" element={<Projects />} /> */}
+//           <Route path="/About" element={<About />} />
+//           {/* <Route path="/experience" element={<Experience />} /> */}
+//           {/* <Route path="/contact" element={<Contact />} /> */}
+//         </Routes>
+
+//         {/* <Footer /> */}
+//       </div>
+//     </Router>
 //   );
-// }
+// };
+
 // export default App;
 
-// import Alert from "./componets/Alert";
+// import "bootstrap/dist/css/bootstrap.min.css";
+// import React, { useState, useEffect } from "react";
+// import "./App.css";
+// import NavBar from "./components/NavBar";
+// import Home from "./components/Home";
+// import About from "./components/About";
 
-// function App() {
+// const App: React.FC = () => {
+//   const [load, updateLoad] = useState(true);
+
+//   useEffect(() => {
+//     const timer = setTimeout(() => {
+//       updateLoad(false);
+//     }, 1200);
+
+//     return () => clearTimeout(timer);
+//   }, []);
+
 //   return (
-//     <div>
-//       <Alert>
-//         Hello<h3> World</h3>
-//       </Alert>
+//     <div className="App" id={load ? "no-scroll" : "scroll"}>
+//       <NavBar />
+//       <section id="home">
+//         <Home />
+//       </section>
+//       <section id="about">
+//         <About />
+//       </section>
 //     </div>
 //   );
-// }
+// };
+
 // export default App;
 
-import React from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
+import React, { useState, useEffect } from "react";
 import "./App.css";
-import NavBar from "./componets/NavBar";
-import CustomListGroup from "./componets/ListGroup";
-import CustomAlert from "./componets/Alert";
+import NavBar from "./components/NavBar";
+import Home from "./components/Home";
+import About from "./components/About";
+import ProjectBed from "./components/Experience";
+import Contact from "./components/Contact";
 
 const App: React.FC = () => {
-  const items = ["New York", "London", "San Francisco", "Los Angeles"];
+  const [load, updateLoad] = useState(true);
 
-  const handleSelectItem = (item: string) => {
-    console.log(item);
-  };
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      updateLoad(false);
+    }, 1200);
+
+    return () => clearTimeout(timer);
+  }, []);
 
   return (
-    <>
+    <div className="App" id={load ? "no-scroll" : "scroll"}>
       <NavBar />
-      <div className="container mt-4">
-        <CustomAlert>Hello World</CustomAlert>
-        <CustomListGroup
-          items={items}
-          heading="Cities"
-          onSelectItem={handleSelectItem}
-        />
-      </div>
-    </>
+      <section id="home">
+        <Home />
+      </section>
+      <section id="about">
+        <About />
+      </section>
+      <section id="projects">
+        <ProjectBed />
+      </section>
+      <section id="contact">
+        <Contact />
+      </section>
+    </div>
   );
 };
 

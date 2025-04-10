@@ -1,0 +1,33 @@
+.project-bed-section {
+    padding: 4rem 0;
+}
+
+.project-heading {
+    font-size: 3rem;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.project-images-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.project-image-wrapper {
+    position: relative;
+    margin: 1rem;
+}
+
+.project-image-wrapper img {
+    width: calc(100vw / 2 - 2rem);
+    /* Adjust width */
+    max-width: 400px;
+    /* Optional max width */
+    border-radius: 8px;
+}
+
+.overlay-text {
+    position: absolute;
+    top: calc(50% - .5rem);
+}

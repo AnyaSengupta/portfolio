@@ -1,0 +1,50 @@
+.contact-section {
+    padding: 4rem;
+    background-color: var(--color-bg);
+    color: var(--color-text);
+}
+
+.contact-heading {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    color: var(--color-contrast);
+}
+
+.contact-section p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.contact-section form {
+    margin-top: 1rem;
+}
+
+.contact-section .form-group {
+    margin-bottom: 1.5rem;
+}
+
+.contact-section .form-label {
+    font-weight: bold;
+    color: var(--color-contrast);
+}
+
+.contact-section .form-control {
+    border-radius: 8px;
+    padding: 0.75rem;
+    border: var(--color-contrast);
+}
+
+.contact-section .btn-primary {
+    background-color: var(--color-contrast);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 0.75rem 1.5rem;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease;
+}
+
+.contact-section .btn-primary:hover {
+    background-color: var(--color-navbar);
+}
