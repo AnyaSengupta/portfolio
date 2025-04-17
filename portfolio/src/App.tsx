@@ -102,7 +102,7 @@ const App: React.FC = () => {
       <section id="about">
         <About />
       </section>
-      <section id="projects">
+      <section id="experience">
         <ProjectBed />
       </section>
       <section id="contact">

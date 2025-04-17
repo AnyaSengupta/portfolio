@@ -1,21 +1,22 @@
 .navbar-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+display: flex;
+justify-content: space-between;
+align-items: center;
 }
 
 .nav-links-left,
 .nav-links-right {
-    display: flex;
-    gap: 10rem;
-    font-size: 2em;
+display: flex;
+gap: 10rem;
+font-size: 2em;
 }
 
 .navbar-logo {
-    position: relative;
-    text-align: center;
+position: relative;
+text-align: center;
 }
 
 .daisy-logo img {
-    width: 80px;
+width: 5em;
+text-align: center;
 }

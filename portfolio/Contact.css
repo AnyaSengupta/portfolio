@@ -1,27 +1,31 @@
 .contact-section {
-    padding: 4rem;
+    padding: 10em;
     background-color: var(--color-bg);
     color: var(--color-text);
 }
 
 .contact-heading {
-    font-size: 3rem;
+    font-size: 5rem;
     margin-bottom: 2rem;
     color: var(--color-contrast);
+    font-family: 'Austin Trial',
+            serif;
 }
 
 .contact-section p {
-    font-size: 1.1rem;
-    margin-bottom: 2rem;
+    font-size: 1.5rem;
+    margin-bottom: 1em;
     text-align: center;
 }
 
 .contact-section form {
-    margin-top: 1rem;
+    margin-top: 1em;
+    margin-bottom: 2em;
+    
 }
 
 .contact-section .form-group {
-    margin-bottom: 1.5rem;
+    margin-bottom: 1em;
 }
 
 .contact-section .form-label {
@@ -31,18 +35,22 @@
 
 .contact-section .form-control {
     border-radius: 8px;
-    padding: 0.75rem;
+    padding: 1rem;
     border: var(--color-contrast);
+    margin-bottom: 2em;
 }
 
 .contact-section .btn-primary {
     background-color: var(--color-contrast);
     color: white;
+    font-family: 'Austin Trial',
+            serif;
     border: none;
     border-radius: 8px;
     padding: 0.75rem 1.5rem;
-    font-size: 1.1rem;
+    font-size: 1.5rem;
     transition: background-color 0.3s ease;
+    
 }
 
 .contact-section .btn-primary:hover {
