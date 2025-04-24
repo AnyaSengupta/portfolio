@@ -2,16 +2,24 @@ import React from "react";
 import { Container, Row, Col, Form, Button } from "react-bootstrap";
 import "../../Contact.css";
 
+// import { Canvas } from "@react-three/fiber";
+// import { OrbitControls } from "@react-three/drei";
+// import Mailbox from "../../mailbox/Mailbox";
+
 const Contact: React.FC = () => {
   return (
+    //     <Canvas>
+    //       <Suspense fallback = {null}>
+    // <Mailbox/>
+    //       </Suspense>
+    //     </Canvas>
     <Container fluid className="contact-section" id="contact">
       <Container>
         <Row>
           <Col md={12} className="text-center">
             <h1 className="contact-heading">
-              Contact <span className="highlight">ME</span>
+              Contact with <span className="highlight">ME</span>
             </h1>
-            <p>I would love to connect</p>
           </Col>
         </Row>
         <Row>

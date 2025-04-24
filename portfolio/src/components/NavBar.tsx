@@ -80,7 +80,14 @@
 
 // export default NavBar;
 
-import React, { useState, useEffect } from "react";
+import React, {
+  useCallback,
+  useRef,
+  useState,
+  useEffect,
+  useMemo,
+} from "react";
+import { useMotionValueEvent, useScroll, useTransform } from "framer-motion";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import Container from "react-bootstrap/Container";
@@ -88,27 +95,48 @@ import "../../NavBar.css";
 
 const NavBar: React.FC = () => {
   const [expand, updateExpanded] = useState(false);
-  const [navColour, updateNavbar] = useState(false);
+  const [navColor, updateNavbar] = useState(false);
+  const ref = useRef<HTMLCanvasElement>(null);
+
+  const { scrollYProgress } = useScroll();
+
+  const images = useMemo(() => {
+    const loadedImages: HTMLImageElement[] = [];
+
+    for (let i = 1; i <= 60; i++) {
+      const img = new Image();
+      img.src = `../../images/navbarFlowerAnimation/ezgif-frame-0${i}.jpg`;
+      loadedImages.push(img);
+    }
+
+    return loadedImages;
+  }, []);
+
+  const render = useCallback(
+    (index: number) => {
+      if (images[index - 1]) {
+        ref.current?.getContext("2d")?.drawImage(images[index - 1], 0, 0);
+      }
+    },
+    [images]
+  );
+
+  const currentIndex = useTransform(scrollYProgress, [0, 1], [1, 60]);
+
+  useMotionValueEvent(currentIndex, "change", (latest) => {
+    render(Number(latest.toFixed()));
+  });
 
   useEffect(() => {
-    const scrollHandler = () => {
-      if (window.scrollY >= 20) {
-        updateNavbar(true);
-      } else {
-        updateNavbar(false);
-      }
-    };
-
-    window.addEventListener("scroll", scrollHandler);
-    return () => window.removeEventListener("scroll", scrollHandler);
-  }, []);
+    render(1);
+  }, [render]);
 
   return (
     <Navbar
       expanded={expand}
       fixed="top"
       expand="md"
-      className={navColour ? "sticky" : "navbar"}
+      className={navColor ? "sticky" : "navbar"}
     >
       <Container className="navbar-container">
         <Nav className="nav-links-left">
@@ -126,7 +154,7 @@ const NavBar: React.FC = () => {
 
         <Navbar.Brand href="#home" className="navbar-logo">
           <div className="daisy-logo">
-            <img src="../../images/daisy.gif" alt="Daisy Logo" />
+            <canvas ref={ref} />
           </div>
         </Navbar.Brand>
 
