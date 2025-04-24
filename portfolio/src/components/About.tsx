@@ -20,11 +20,12 @@ const About: React.FC = () => {
                 I am a second-year Linguistics and Computer Science major at
                 UCLA. I am further developing my industry experience and
                 technical skills both within and beyond coursework, with the
-                goal of making a lasting impact. Outside of coursework,
+                goal of making a lasting impact.
               </p>
               <p>
-                I am an DevX Web Developer Intern and have software engineering
-                experience at nSpire AI and S&P Global.
+                Outside of coursework, I am an DevX Web Developer Intern and
+                have software engineering experience at nSpire AI and S&P
+                Global.
               </p>
               <p>
                 Outside of this, I enjoy playing sports like basketball and
