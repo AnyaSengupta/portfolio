@@ -56,3 +56,8 @@
 .contact-section .btn-primary:hover {
     background-color: var(--color-navbar);
 }
+.contact-section .canvas-container {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
