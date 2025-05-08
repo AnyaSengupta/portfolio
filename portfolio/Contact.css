@@ -7,7 +7,7 @@
 .contact-heading {
     font-size: 5rem;
     margin-bottom: 2rem;
-    color: var(--color-contrast);
+    color: #B67162;
     font-family: 'Austin Trial',
             serif;
 }
@@ -30,18 +30,18 @@
 
 .contact-section .form-label {
     font-weight: bold;
-    color: var(--color-contrast);
+    color: #B67162;
 }
 
 .contact-section .form-control {
     border-radius: 8px;
     padding: 1rem;
-    border: var(--color-contrast);
+    border: #B67162;
     margin-bottom: 2em;
 }
 
 .contact-section .btn-primary {
-    background-color: var(--color-contrast);
+    background-color: #B67162;
     color: white;
     font-family: 'Austin Trial',
             serif;

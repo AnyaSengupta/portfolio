@@ -1,85 +1,3 @@
-// import React, { useState, useEffect } from "react";
-// import Navbar from "react-bootstrap/Navbar";
-// import Nav from "react-bootstrap/Nav";
-// import Container from "react-bootstrap/Container";
-// import "../../NavBar.css";
-
-// const NavBar: React.FC = () => {
-//   const [expand, updateExpanded] = useState(false);
-//   const [navColour, updateNavbar] = useState(false);
-
-//   useEffect(() => {
-//     const scrollHandler = () => {
-//       if (window.scrollY >= 20) {
-//         updateNavbar(true);
-//       } else {
-//         updateNavbar(false);
-//       }
-//     };
-
-//     window.addEventListener("scroll", scrollHandler);
-//     return () => window.removeEventListener("scroll", scrollHandler);
-//   }, []);
-
-//   return (
-//     <Navbar
-//       expanded={expand}
-//       fixed="top"
-//       expand="md"
-//       className={navColour ? "sticky" : "navbar"}
-//     >
-//       <Container>
-//         <Navbar.Brand href="#home" className="navbar-logo">
-//           {/* Daisy flower logo */}
-//           <div className="daisy-logo">
-//             {/* SVG or image of daisy flowers */}
-//           </div>
-//         </Navbar.Brand>
-//         <Navbar.Toggle
-//           aria-controls="responsive-navbar-nav"
-//           onClick={() => updateExpanded(!expand)}
-//         >
-//           <span></span>
-//           <span></span>
-//           <span></span>
-//         </Navbar.Toggle>
-//         <Navbar.Collapse id="responsive-navbar-nav">
-//           <Nav className="ms-auto" defaultActiveKey="#home">
-//             <Nav.Item>
-//               <Nav.Link href="#home" onClick={() => updateExpanded(false)}>
-//                 Home
-//               </Nav.Link>
-//             </Nav.Item>
-
-//             <Nav.Item>
-//               <Nav.Link href="#about" onClick={() => updateExpanded(false)}>
-//                 About
-//               </Nav.Link>
-//             </Nav.Item>
-
-//             <Nav.Item>
-//               <Nav.Link
-//                 href="#experience"
-//                 onClick={() => updateExpanded(false)}
-//               >
-//                 Experience
-//               </Nav.Link>
-//             </Nav.Item>
-
-//             <Nav.Item>
-//               <Nav.Link href="#contact" onClick={() => updateExpanded(false)}>
-//                 Contact
-//               </Nav.Link>
-//             </Nav.Item>
-//           </Nav>
-//         </Navbar.Collapse>
-//       </Container>
-//     </Navbar>
-//   );
-// };
-
-// export default NavBar;
-
 import React, {
   useCallback,
   useRef,
@@ -105,7 +23,7 @@ const NavBar: React.FC = () => {
 
     for (let i = 1; i <= 60; i++) {
       const img = new Image();
-      img.src = `../../images/navbarFlowerAnimation/ezgif-frame-0${i}.jpg`;
+      img.src = `../../images/compassLogo/compass${i}.png`;
       loadedImages.push(img);
     }
 
@@ -153,8 +71,8 @@ const NavBar: React.FC = () => {
         </Nav>
 
         <Navbar.Brand href="#home" className="navbar-logo">
-          <div className="daisy-logo">
-            <canvas ref={ref} />
+          <div className="compass-logo">
+            <canvas width={1500} height={1000} ref={ref} />
           </div>
         </Navbar.Brand>
 

@@ -1,9 +1,88 @@
-import React from "react";
+import React, {
+  useCallback,
+  useRef,
+  useState,
+  useEffect,
+  useMemo,
+} from "react";
 import { Container, Row, Col } from "react-bootstrap";
+import { useMotionValueEvent, useScroll, useTransform } from "framer-motion";
 import "../../Home.css";
-import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 
 const Home: React.FC = () => {
+  const [expand, updateExpanded] = useState(false);
+  const [navColor, updateNavbar] = useState(false);
+  const canvasRefSunset = useRef<HTMLCanvasElement>(null);
+
+  const { scrollY } = useScroll();
+  const [maxScroll, setMaxScroll] = useState(670);
+
+  useEffect(() => {
+    const updateMaxScroll = () => {
+      const fullHeight =
+        document.documentElement.scrollHeight - window.innerHeight;
+    };
+
+    updateMaxScroll();
+    window.addEventListener("resize", updateMaxScroll);
+    window.addEventListener("load", updateMaxScroll);
+    return () => {
+      window.removeEventListener("resize", updateMaxScroll);
+      window.removeEventListener("load", updateMaxScroll);
+    };
+  }, []);
+
+  const images = useMemo(() => {
+    const loadedImages: HTMLImageElement[] = [];
+    for (let i = 116; i >= 1; i--) {
+      const img = new Image();
+      img.src = `/images/sunsetAnimation/sunset${i}.png`;
+      loadedImages.push(img);
+    }
+    return loadedImages;
+  }, []);
+
+  const render = useCallback(
+    (index: number) => {
+      const canvas = canvasRefSunset.current;
+      const ctx = canvas?.getContext("2d");
+      const img = images[index - 1];
+
+      if (canvas && ctx && img?.complete) {
+        canvas.width = img.width;
+        canvas.height = img.height;
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        ctx.drawImage(img, 0, 0);
+      }
+    },
+    [images]
+  );
+
+  const currentIndex = useTransform(scrollY, [0, maxScroll], [1, 116], {
+    clamp: true,
+  });
+
+  useMotionValueEvent(currentIndex, "change", (latest) => {
+    render(Math.round(latest));
+  });
+
+  useEffect(() => {
+    const img = images[0];
+    if (img.complete) {
+      render(1);
+    } else {
+      img.onload = () => render(1);
+    }
+  }, [images, render]);
+
+  useEffect(() => {
+    const scrollHandler = () => {
+      updateNavbar(window.scrollY >= 20);
+    };
+    window.addEventListener("scroll", scrollHandler);
+    return () => window.removeEventListener("scroll", scrollHandler);
+  }, []);
+
   return (
     <Container fluid className="home-section">
       <Container>
@@ -11,13 +90,8 @@ const Home: React.FC = () => {
           <Col md={8} className="text-center">
             <div className="home-content">
               <div className="logo-container">
-                <div className="floral-logo">
-                  <svg className="flowers" viewBox="0 0 200 200"></svg>
-                  <DotLottieReact
-                    src="https://lottie.host/c6fdc9bb-1800-47bf-a2bd-b1f45b3bad1b/rdj7a0kQQn.lottie"
-                    loop
-                    autoplay
-                  />
+                <div className="sunset-logo">
+                  <canvas ref={canvasRefSunset}></canvas>
                 </div>
                 <div className="name-container">
                   <h1 className="name-heading">Anya</h1>

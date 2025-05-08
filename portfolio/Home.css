@@ -2,7 +2,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-top: 0px;
+    padding-top: 20rem;
     padding-bottom: 10rem;
     padding-right: 10em;
     
@@ -13,11 +13,17 @@
     position: relative;
 }
 
-.floral-logo {
-    width: 450px;
+.sunset-logo {
+    /* width: 450px;
     height: 450px;
     margin: 0 auto 1rem;
-    margin-left:9em;
+    margin-top: 2em;
+    margin-left:9em; */
+    position: absolute;
+        top: -4em;
+        left: 0;
+        z-index: 1;
+        
 }
 
 .name-heading {
@@ -27,4 +33,12 @@
     color: var(--color-text);
     padding-left: 3em;
     text-align: left;
+}
+
+
+.name-container {
+    position: relative;
+    z-index: 2;
+    /* higher than .floral-logo */
+    /* Optionally, add background or padding for readability */
 }

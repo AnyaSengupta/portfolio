@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Row, Col, Form, Button } from "react-bootstrap";
-import Mailbox from "./Mailbox"; 
+import Mailbox from "./Mailbox";
 import "../../Contact.css";
 
 const Contact: React.FC = () => {
@@ -10,7 +10,7 @@ const Contact: React.FC = () => {
         <Row>
           <Col md={6}>
             <h1 className="contact-heading">
-              Contact  <span className="highlight">ME</span>
+              Contact <span className="highlight">ME</span>
             </h1>
             <Form>
               {/* ...form fields as before... */}
@@ -24,14 +24,21 @@ const Contact: React.FC = () => {
               </Form.Group>
               <Form.Group controlId="formMessage">
                 <Form.Label>Message</Form.Label>
-                <Form.Control as="textarea" rows={4} placeholder="Enter your message" />
+                <Form.Control
+                  as="textarea"
+                  rows={4}
+                  placeholder="Enter your message"
+                />
               </Form.Group>
               <Button variant="primary" type="submit">
                 Submit
               </Button>
             </Form>
           </Col>
-          <Col md={6} className="d-flex align-items-center justify-content-center">
+          <Col
+            md={6}
+            className="d-flex align-items-center justify-content-center"
+          >
             <Mailbox />
           </Col>
         </Row>

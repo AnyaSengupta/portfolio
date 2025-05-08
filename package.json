@@ -14,9 +14,11 @@
     "react-router": "^7.4.1",
     "react-router-dom": "^7.4.1",
     "three": "^0.176.0",
-    "tsx-to-jsx": "^0.0.4"
+    "tsx-to-jsx": "^0.0.4",
+    "yuka": "^0.7.8"
   },
   "devDependencies": {
+    "@types/yuka": "^0.7.4",
     "sass": "^1.86.2"
   }
 }

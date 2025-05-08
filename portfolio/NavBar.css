@@ -3,7 +3,7 @@
     justify-content: space-between;
     align-items: center;
     position: relative;
-    padding: .7em;
+    padding: .2em;
 }
 
 .navbar-logo {
@@ -18,20 +18,12 @@
 .nav-links-right {
     display: flex;
     gap: 10rem;
-    font-size: 1.5em;
+    font-size: 1em;
     min-width: 200px;
 }
 
-.navbar-logo {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.daisy-logo canvas {
-    width: 6em;
+.compass-logo canvas {
+    padding-top: 1em;
+    height: 6em;
     align-content: center;
 }

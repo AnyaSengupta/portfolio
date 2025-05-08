@@ -1,8 +1,8 @@
 :root {
-    --color-navbar: #8FB290;
-    --color-bg: #f5f5eb;
-    --color-accent: #EADCF8;
-    --color-contrast: #5D3B66;
+    --color-navbar: #F8EDE3;
+    --color-bg: #F8EDE3;
+    --color-accent: #B67162;
+    --color-contrast: #FBDB93;
     --color-text: #2D2D2D;
 
     --font-heading: 'Austin Trial', serif;
@@ -21,11 +21,12 @@ body {
 .navbar {
     background-color: var(--color-navbar) !important;
     padding: 0.5rem 1rem;
+    
 }
 
 .navbar a,
 .navbar-brand {
-    color: white !important;
+    color: #B67162 !important;
     font-family: "Satoshi";
     font-weight: bold;
 }
