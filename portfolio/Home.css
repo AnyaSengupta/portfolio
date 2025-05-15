@@ -39,8 +39,6 @@
 .name-container {
     position: relative;
     z-index: 2;
-    /* higher than .floral-logo */
-    /* Optionally, add background or padding for readability */
 }
 
 @media (max-width: 768px) {
@@ -53,30 +51,32 @@
     }
 
     .logo-container {
+        margin-top: 8em;
         width: 100%;
         text-align: center;
     }
 
-    .sunset-logo {
+    .sunset-logo canvas{
         position: static;
-        width: 70vw;
-        max-width: 220px;
+        width: 80vw;
+        max-width: 80vw;
         height: auto;
         margin: 0 auto 1em;
         display: block;
+        margin-top: -6em;
+        margin-left: -3em;
     }
 
     .name-heading {
-        font-size: 2.5rem;
+        margin-top: -1.6em;
+        margin-left: 3.2em;
+        font-size: 4rem;
         padding-left: 0;
-        text-align: center;
-        word-break: break-word;
+        text-align: left;
     }
 
     .name-container {
         padding: 0.5em 0;
         width: 100%;
-        background: rgba(255, 255, 255, 0.85);
-        /* Optional: for readability */
     }
 }

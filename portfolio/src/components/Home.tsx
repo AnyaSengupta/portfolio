@@ -94,8 +94,9 @@ const Home: React.FC = () => {
                   <canvas ref={canvasRefSunset}></canvas>
                 </div>
                 <div className="name-container">
-                  <h1 className="name-heading">Anya</h1>
-                  <h1 className="name-heading">Sengupta</h1>
+                  <h1 className="name-heading">
+                    Anya <br></br>Sengupta
+                  </h1>
                 </div>
               </div>
             </div>
