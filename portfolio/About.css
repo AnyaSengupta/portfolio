@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
 .about-section {
     color: var(--color-text);
     margin: 5em;
@@ -50,6 +51,7 @@
         font-size: 2.2rem;
         margin-bottom: 1rem;
         text-align: center;
+        font-family: 'Montserrat', Arial, sans-serif;
     }
 
     .about-text p {

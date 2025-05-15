@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
 .footer {
     background: #f8ede3;
     padding-top: 1em;
@@ -27,6 +28,9 @@
 }
 
 @media (max-width: 390px) {
+    .footer {
+        font-family: 'Montserrat', Arial, sans-serif;
+    }
     .footer-row {
         grid-template-columns: 1fr;
         row-gap: 16px;
