@@ -30,8 +30,9 @@ body {
 .navbar a,
 .navbar-brand {
     color: #B67162 !important;
-    font-family: 'Satoshi';
-        src: url('/fonts/Satoshi-Regular.woff2') format('woff2');
+    font-family: 'Montserrat',
+            Arial,
+            sans-serif;
     font-weight: bold;
 }
 
