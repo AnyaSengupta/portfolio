@@ -26,9 +26,17 @@
     font-weight: 400;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 768px) {
     .footer-row {
-        grid-template-columns: 1fr 1fr;
-        row-gap: 24px;
+        grid-template-columns: 1fr;
+        row-gap: 16px;
+        padding: 20px 0 20px 0;
+        font-size: 1rem;
+    }
+
+    .footer-col {
+        padding: 0 1em;
+        text-align: left;
+        margin-bottom: 1em;
     }
 }

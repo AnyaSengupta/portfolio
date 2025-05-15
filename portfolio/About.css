@@ -38,3 +38,48 @@
     width: 80px;
     height: 100px;
 }
+
+@media (max-width: 768px) {
+    .about-section {
+        margin: 1em;
+        padding: 0.5em;
+    }
+
+    .about-heading {
+        font-size: 2.2rem;
+        margin-bottom: 1rem;
+        text-align: center;
+    }
+
+    .about-text p {
+        font-size: 1rem;
+        line-height: 1.5;
+        margin-bottom: 0.75rem;
+        text-align: left;
+    }
+
+    .about-content-row {
+        margin-top: 0.5rem;
+        flex-direction: column;
+        gap: 1em;
+    }
+
+    .profile-image-container {
+        width: 100%;
+        margin-bottom: 1em;
+    }
+
+    .profile-image {
+        width: 60vw;
+        max-width: 180px;
+        margin: 0 auto;
+    }
+
+    .cactus-decoration {
+        position: static;
+        width: 40px;
+        height: 50px;
+        margin: 0 auto;
+        display: block;
+    }
+}
