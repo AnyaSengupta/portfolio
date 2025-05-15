@@ -89,8 +89,8 @@ export default function JeepManualPathTimeline() {
     new YUKA.Vector3(-6, 3.0, 5),
     new YUKA.Vector3(-6, -1, 8),
     new YUKA.Vector3(6, -1, 4),
-    new YUKA.Vector3(6, -6, 8),
-    new YUKA.Vector3(-6, -6, 8),
+    new YUKA.Vector3(6, -5.5, 8),
+    new YUKA.Vector3(-6, -5.5, 8),
     new YUKA.Vector3(-6, -9.5, 4),
     new YUKA.Vector3(6, -9.5, 2),
   ];
