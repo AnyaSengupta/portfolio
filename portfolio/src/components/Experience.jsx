@@ -3,6 +3,8 @@ import * as THREE from "three";
 import * as YUKA from "yuka";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 import { bottom } from "@popperjs/core";
+import "./experience.css";
+
 
 // Timeline data
 const experiences = [
@@ -33,6 +35,18 @@ const experiences = [
     image: "/images/harvard.png",
   },
   {
+    title: "B.S. in Computer Science (Expected 2027)",
+    org: "University of California, Los Angeles (UCLA)",
+    time: "Sep 2023 – Jun 2027",
+    location: "Los Angeles, CA",
+    description: [
+      "Pursuing a rigorous curriculum focused on computer science, artificial intelligence, and software engineering.",
+      "Involved in multiple technical organizations and research initiatives that explore the intersection of computing and real-world impact.",
+      "Passionate about leveraging technology to address social challenges through community-driven innovation.",
+    ],
+    image: "/images/ucla.png",
+  },
+  {
     title: "Software Engineer Intern (AI/ML)",
     org: "nSpire AI · Internship",
     time: "Jun 2024 – Aug 2024 · 3 mos",
@@ -44,18 +58,6 @@ const experiences = [
       "Successfully pitched the tool to the CEO, CTO, and engineering leadership, leading to approval for product integration.",
     ],
     image: "/images/nspireai.png",
-  },
-  {
-    title: "B.S. in Computer Science (Expected 2027)",
-    org: "University of California, Los Angeles (UCLA)",
-    time: "Sep 2023 – Jun 2027",
-    location: "Los Angeles, CA",
-    description: [
-      "Pursuing a rigorous curriculum focused on computer science, artificial intelligence, and software engineering.",
-      "Involved in multiple technical organizations and research initiatives that explore the intersection of computing and real-world impact.",
-      "Passionate about leveraging technology to address social challenges through community-driven innovation.",
-    ],
-    image: "/images/ucla.png",
   },
   {
     title: "Developer Intern",
@@ -202,106 +204,42 @@ export default function JeepManualPathTimeline() {
   // --- Render cards as a vertical, centered timeline with auto-sizing ---
   return (
     <div
-      ref={containerRef}
+  ref={containerRef}
+  className="experience-container"
+>
+  <h1 className="experience-heading">
+    The Journey
+  </h1>
+
+  {experiences.map((exp, idx) => (
+    <div
+      key={idx}
+      id={`exp-card-${idx}`}
+      className="experience-card"
       style={{
-        width: "100vw",
-        minHeight: "100vh",
-        background: BG,
-        position: "relative",
-        overflow: "auto",
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        justifyContent: "flex-start",
-        paddingTop: 80,
-        paddingBottom: 20,
+        // Only keep dynamic margin for the last card:
+        margin: idx === experiences.length - 1 ? "0 auto" : undefined,
       }}
     >
-      <h1 className="experience-heading" style={{ 
-  fontSize: 36, 
-  fontWeight: 700, 
-  textAlign: 'center', 
-  margin: '40px 0 32px 0', 
-  color: '#222', 
-  paddingBottom: 30,
-}}>
-  The Journey
-</h1>
-
-      {experiences.map((exp, idx) => (
-        <div
-          key={idx}
-          id={`exp-card-${idx}`}
-          style={{
-            background: BG,
-            borderRadius: 18,
-            boxShadow: "0 4px 24px #0002",
-            padding: "1.5rem 2rem",
-            margin: idx === experiences.length - 1 ? "0 auto" : `0 auto 120px auto`,
-            position: "relative",
-            zIndex: 3,
-            display: "flex",
-            alignItems: "flex-start",
-            width: "min(65%)",
-            // maxWidth: "80%",
-            minWidth: 320,
-            wordBreak: "break-word",
-          }}
-        >
-          <img
-            src={exp.image}
-            alt=""
-            style={{
-              width: 90,
-              height: 90,
-              objectFit: "cover",
-              borderRadius: 8,
-              marginRight: 20,
-              flexShrink: 0,
-            }}
-          />
-          <div>
-            <div
-              style={{
-                fontWeight: "bold",
-                color: "#8A2D3B",
-                marginBottom: 2,
-              }}
-            >
-              {exp.org}
-            </div>
-            <div
-              style={{
-                fontWeight: "bold",
-                fontSize: 17,
-                marginBottom: 2,
-              }}
-            >
-              {exp.title}
-            </div>
-            <div
-              style={{
-                fontSize: 13,
-                color: "#888",
-                marginBottom: 2,
-              }}
-            >
-              {exp.time} · {exp.location}
-            </div>
-            <ul
-              style={{
-                fontSize: 13,
-                margin: 0,
-                paddingLeft: 18,
-              }}
-            >
-              {exp.description.map((line, i) => (
-                <li key={i}>{line}</li>
-              ))}
-            </ul>
-          </div>
+      <img
+        src={exp.image}
+        alt=""
+        className="experience-image"
+      />
+      <div>
+        <div className="experience-org">{exp.org}</div>
+        <div className="experience-title">{exp.title}</div>
+        <div className="experience-time-location">
+          {exp.time} · {exp.location}
         </div>
-      ))}
+        <ul className="experience-description">
+          {exp.description.map((line, i) => (
+            <li key={i}>{line}</li>
+          ))}
+        </ul>
+      </div>
     </div>
+  ))}
+</div>
   );
 }

@@ -1,0 +1,138 @@
+/* Container for the whole timeline */
+.experience-container {
+    width: 100vw;
+    min-height: 100vh;
+    background: #F8EDE3;
+    position: relative;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 80px;
+    padding-bottom: 20px;
+}
+
+/* Heading */
+.experience-heading {
+    font-size: 36px;
+    font-weight: 700;
+    text-align: center;
+    margin: 40px 0 32px 0;
+    color: #222;
+    padding-bottom: 30px;
+}
+
+/* Experience card */
+.experience-card {
+    background: #F8EDE3;
+    border-radius: 18px;
+    box-shadow: 0 4px 24px #0002;
+    padding: 1.5rem 2rem;
+    margin: 0 auto 120px auto;
+    position: relative;
+    z-index: 3;
+    display: flex;
+    align-items: flex-start;
+    width: 65%;
+    min-width: 320px;
+    word-break: break-word;
+}
+
+/* Remove bottom margin for last card */
+.experience-card:last-child {
+    margin-bottom: 0;
+}
+
+/* Organization name */
+.experience-org {
+    font-weight: bold;
+    color: #8A2D3B;
+    margin-bottom: 2px;
+}
+
+/* Title */
+.experience-title {
+    font-weight: bold;
+    font-size: 17px;
+    margin-bottom: 2px;
+}
+
+/* Time and location */
+.experience-time-location {
+    font-size: 13px;
+    color: #888;
+    margin-bottom: 2px;
+}
+
+/* Description list */
+.experience-description {
+    font-size: 13px;
+    margin: 0;
+    padding-left: 18px;
+}
+
+/* Image */
+.experience-image {
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-right: 20px;
+    flex-shrink: 0;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .experience-card {
+        width: 95%;
+        min-width: 0;
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem 0.5rem;
+    }
+
+    .experience-image {
+        margin-right: 0;
+        margin-bottom: 12px;
+    }
+}
+
+@media (max-width: 768px) {
+    .experience-container {
+        padding-top: 60px;
+        padding-bottom: 10px;
+    }
+
+    .experience-heading {
+        font-size: 1.5rem;
+        margin: 24px 0 20px 0;
+        padding-bottom: 16px;
+    }
+
+    .experience-card {
+        width: 96%;
+        min-width: 0;
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem 0.5rem;
+        margin-bottom: 40px;
+    }
+
+    .experience-image {
+        width: 60px;
+        height: 60px;
+        margin-right: 0;
+        margin-bottom: 12px;
+    }
+
+    .experience-org,
+    .experience-title .experience-time-location{
+        text-align: center;
+    }
+
+    .experience-description {
+        font-size: 0.95rem;
+        padding-left: 20px;
+    }
+}
