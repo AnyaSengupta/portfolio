@@ -111,19 +111,19 @@
      margin: 0;
  }
 
- @media (max-width: 768px) {
+ @media (max-width: 390px) {
      .navbar-container {
-         gap: 1em;
-         padding: 0 0.5em;
+         gap: 1.1em;
+         padding: 0 1em;
      }
 
      .compass-logo canvas {
         margin-top: -0.5em;
-         height: 2.2em;
+         height: 2em;
      }
 
      .nav-links {
          gap: 1.6em;
-         font-size: 0.7em;
+         font-size: 0.5em;
      }
  }

@@ -62,9 +62,9 @@
     margin: 0 auto;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 390px) {
     .contact-section {
-        padding: 2em 0.5em;
+        padding: 8em 0.5em;
     }
 
     .contact-heading {
@@ -90,13 +90,13 @@
     }
 
     .contact-section .form-label {
-        font-size: 1rem;
+        font-size: 0.7rem;
     }
 
     .contact-section .form-control {
         padding: 0.75rem;
         margin-bottom: 1em;
-        font-size: 1em;
+        font-size: 0.6em;
     }
 
     .contact-section .btn-primary {

@@ -31,11 +31,11 @@
         grid-template-columns: 1fr;
         row-gap: 16px;
         padding: 20px 0 20px 0;
-        font-size: 1rem;
+        font-size: 0.7rem;
     }
 
     .footer-col {
-        padding: 0 1em;
+        padding: 0 9em;
         text-align: left;
         margin-bottom: 1em;
     }
