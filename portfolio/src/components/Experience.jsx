@@ -3,7 +3,7 @@ import * as THREE from "three";
 import * as YUKA from "yuka";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 import { bottom } from "@popperjs/core";
-import "./experience.css";
+import "./Experience.css";
 
 
 // Timeline data
