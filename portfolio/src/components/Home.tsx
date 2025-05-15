@@ -34,7 +34,7 @@ const Home: React.FC = () => {
 
   const images = useMemo(() => {
     const loadedImages: HTMLImageElement[] = [];
-    for (let i = 1; i <= 140; i++) {
+    for (let i = 116; i >= 1; i--) {
       const img = new Image();
       img.src = `/images/sunsetAnimation/sunset${i}.png`;
       loadedImages.push(img);
@@ -58,7 +58,7 @@ const Home: React.FC = () => {
     [images]
   );
 
-  const currentIndex = useTransform(scrollY, [1, maxScroll], [1, 140], {
+  const currentIndex = useTransform(scrollY, [0, maxScroll], [1, 116], {
     clamp: true,
   });
 
