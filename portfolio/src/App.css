@@ -5,7 +5,8 @@
     --color-contrast: #8A2D3B;
     --color-text: #2D2D2D;
 
-    --font-heading: 'Austin Trial', serif;
+    --font-heading: font-family: 'Austin';
+        src: url('/fonts/Austin-Light-Trial.otf') format('opentype');;
     --font-body: 'Inter', sans-serif;
 }
 
@@ -27,7 +28,8 @@ body {
 .navbar a,
 .navbar-brand {
     color: #B67162 !important;
-    font-family: "Satoshi";
+    font-family: 'Satoshi';
+        src: url('/fonts/Satoshi-Regular.woff2') format('woff2');
     font-weight: bold;
 }
 
@@ -86,7 +88,7 @@ button:hover,
     overflow: visible;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 390px) {
     body {
         padding: 0 0.5em;
     }

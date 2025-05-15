@@ -43,8 +43,8 @@
 .contact-section .btn-primary {
     background-color: #B67162;
     color: white;
-    font-family: 'Austin Trial',
-            serif;
+    font-family: 'Austin';
+        src: url('/fonts/Austin-Light-Trial.otf') format('opentype');
     border: none;
     border-radius: 8px;
     padding: 0.75rem 1.5rem;
