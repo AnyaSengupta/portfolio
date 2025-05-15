@@ -5,8 +5,9 @@
     --color-contrast: #8A2D3B;
     --color-text: #2D2D2D;
 
-    --font-heading: font-family: 'Austin';
-        src: url('/fonts/Austin-Light-Trial.otf') format('opentype');;
+    --font-heading: 'Austin Trial',
+        serif;
+        src: url('/fonts/Austin-Light-Trial.otf') format('opentype');
     --font-body: 'Inter', sans-serif;
 }
 
