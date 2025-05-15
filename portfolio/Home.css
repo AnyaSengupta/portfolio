@@ -42,3 +42,41 @@
     /* higher than .floral-logo */
     /* Optionally, add background or padding for readability */
 }
+
+@media (max-width: 768px) {
+    .home-section {
+        flex-direction: column;
+        padding-top: 5rem;
+        padding-bottom: 2rem;
+        padding-right: 0;
+        align-items: flex-start;
+    }
+
+    .logo-container {
+        width: 100%;
+        text-align: center;
+    }
+
+    .sunset-logo {
+        position: static;
+        width: 70vw;
+        max-width: 220px;
+        height: auto;
+        margin: 0 auto 1em;
+        display: block;
+    }
+
+    .name-heading {
+        font-size: 2.5rem;
+        padding-left: 0;
+        text-align: center;
+        word-break: break-word;
+    }
+
+    .name-container {
+        padding: 0.5em 0;
+        width: 100%;
+        background: rgba(255, 255, 255, 0.85);
+        /* Optional: for readability */
+    }
+}

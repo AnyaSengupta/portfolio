@@ -214,7 +214,7 @@ export default function JeepManualPathTimeline() {
         alignItems: "center",
         justifyContent: "flex-start",
         paddingTop: 80,
-        paddingBottom: 0,
+        paddingBottom: 20,
       }}
     >
       <h1 className="experience-heading" style={{ 

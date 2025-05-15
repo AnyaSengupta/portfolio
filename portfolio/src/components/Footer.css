@@ -1,0 +1,34 @@
+.footer {
+    background: #f8ede3;
+    padding-top: 1em;
+    border-top: 2px solid #B67162;
+    font-family: "Satoshi";
+    font-weight: lighter;
+}
+
+.footer-row {
+    display: grid;
+    grid-template-columns: 1.5fr 1.5fr 1.5fr 1.5fr;
+    max-width: 100vw;
+    padding: 40px 0 40px 0;
+    color: #B67162;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    box-sizing: border-box;
+}
+
+.footer-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    text-align: left;
+    padding: 0 4em;
+    font-weight: 400;
+}
+
+@media (max-width: 900px) {
+    .footer-row {
+        grid-template-columns: 1fr 1fr;
+        row-gap: 24px;
+    }
+}

@@ -57,34 +57,35 @@ const NavBar: React.FC = () => {
       className={navColor ? "sticky" : "navbar"}
     >
       <Container className="navbar-container">
-        <Nav className="nav-links-left">
-          <Nav.Item>
-            <Nav.Link href="#home" onClick={() => updateExpanded(false)}>
-              Home
-            </Nav.Link>
-          </Nav.Item>
-          <Nav.Item>
-            <Nav.Link href="#about" onClick={() => updateExpanded(false)}>
-              About
-            </Nav.Link>
-          </Nav.Item>
-        </Nav>
-
         <Navbar.Brand href="#home" className="navbar-logo">
           <div className="compass-logo">
             <canvas width={1500} height={1000} ref={ref} />
           </div>
         </Navbar.Brand>
-
-        <Nav className="nav-links-right">
+        <Nav className="nav-links">
+          <Nav.Item>
+            <Nav.Link href="#home" onClick={() => updateExpanded(false)}>
+              HOME
+            </Nav.Link>
+          </Nav.Item>
+          <Nav.Item>
+            <Nav.Link href="#about" onClick={() => updateExpanded(false)}>
+              ABOUT
+            </Nav.Link>
+          </Nav.Item>
           <Nav.Item>
             <Nav.Link href="#experience" onClick={() => updateExpanded(false)}>
-              Experience
+              WORK EXPERIENCE
+            </Nav.Link>
+          </Nav.Item>
+          <Nav.Item>
+            <Nav.Link href="#excursion" onClick={() => updateExpanded(false)}>
+              EXCURSIONS
             </Nav.Link>
           </Nav.Item>
           <Nav.Item>
             <Nav.Link href="#contact" onClick={() => updateExpanded(false)}>
-              Contact
+              CONTACT
             </Nav.Link>
           </Nav.Item>
         </Nav>

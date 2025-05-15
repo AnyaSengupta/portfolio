@@ -6,6 +6,7 @@ import Home from "./components/Home";
 import About from "./components/About";
 import JeepAnimation from "./components/Experience";
 import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 
 const App: React.FC = () => {
   const [load, updateLoad] = useState(true);
@@ -32,6 +33,9 @@ const App: React.FC = () => {
       </section>
       <section id="contact">
         <Contact />
+      </section>
+      <section>
+        <Footer />
       </section>
     </div>
   );
